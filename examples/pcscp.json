@@ -1,0 +1,10 @@
+{
+  "mapping": {
+    "local_project_path": "C:\\local\\path\\PROJECT_ROOT",
+    "remote_project_path": "/remote/path/PROJECT_ROOT"
+  },
+  "login": {
+    "user": "USER_NAME",
+    "host": "REMOTE_SERVER"
+  }
+}

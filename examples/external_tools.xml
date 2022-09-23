@@ -1,0 +1,9 @@
+<toolSet name="External Tools">
+  <tool name="SCP" description="Transfer files between local storage and remote server" showInMainMenu="false" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="false" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="true">
+    <exec>
+      <option name="COMMAND" value="$ModuleSdkPath$" />
+      <option name="PARAMETERS" value="-m pcscp $FilePathRelativeToProjectRoot$ $ProjectFileDir$" />
+      <option name="WORKING_DIRECTORY" value="$ProjectFileDir$" />
+    </exec>
+  </tool>
+</toolSet>
