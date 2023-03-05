@@ -5,8 +5,8 @@ UNIX_LINE_ENDING = b'\n'
 def convert_line_endings(input_file: str, output_file: str) -> None:
     """Replace CRLF (Windows) with LF (Unix).
 
-    :param input_file: full path to the original file with CRLF
-    :param output_file: full path to a new file with LF
+    :param input_file: relative path to the original file with CRLF
+    :param output_file: relative path to a new file with LF
     :return: None; creates a new file
     """
 
