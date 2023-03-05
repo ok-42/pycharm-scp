@@ -1,5 +1,6 @@
 import subprocess
 import sys
+from pathlib import Path
 
 from pcscp.config import setup
 from pcscp.utils import convert_line_endings
@@ -34,11 +35,13 @@ def scp(
 def main() -> None:
     """Creates a new file with LF and sends it to remote machine using SCP.
 
-    [1] Convert CRLF to LF.
+    [1] Convert CRLF to LF (that creates a new temporary file).
 
     [2] Read paths mapping.
 
     [3] Execute SCP command.
+
+    [4] Remove the temporary file from [1].
     """
 
     # [1]
@@ -64,3 +67,6 @@ def main() -> None:
         upload=True)
 
     subprocess.run(command, check=True)
+
+    # [4]
+    Path(relative_file_path_lf).unlink()
