@@ -67,6 +67,8 @@ def main() -> None:
         upload=True)
 
     subprocess.run(command, check=True)
+    print('From:', command[1][:-2].replace('\\', '/'))
+    print('To:  ', command[2])
 
     # [4]
     Path(relative_file_path_lf).unlink()
