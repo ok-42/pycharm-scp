@@ -1,0 +1,47 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "mapping": {
+            "type": "object",
+            "properties": {
+                "local_project_path": {
+                    "type": "string",
+                    "description": "Local path to the root of the project"
+                },
+                "remote_project_path": {
+                    "type": "string",
+                    "description": "Remote path to the root of the project"
+                }
+            },
+            "required": [
+                "local_project_path",
+                "remote_project_path"
+            ],
+            "description": "Mapping between local and remote project paths"
+        },
+        "login": {
+            "type": "object",
+            "properties": {
+                "user": {
+                    "type": "string",
+                    "description": "User name for login"
+                },
+                "host": {
+                    "type": "string",
+                    "description": "Remote server host name"
+                }
+            },
+            "required": [
+                "user",
+                "host"
+            ],
+            "description": "Login credentials for the remote server"
+        }
+    },
+    "required": [
+        "mapping",
+        "login"
+    ],
+    "description": "JSON configuration with project mapping and login information"
+}
